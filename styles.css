@@ -1,0 +1,103 @@
+/* Centralizar tudo no ecrã */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;       
+    background: #1a1a1a; /* preto suave */
+    font-family: Arial, sans-serif;
+}
+
+/* Título centrado */
+#title h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 32px;
+    color: #ff8c00; /* laranja forte */
+    text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+}
+
+/* Caixa da calculadora */
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #252525; /* preto mais claro */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.3); /* brilho laranja */
+}
+
+/* Área do display */
+.display-area {
+    display: flex;
+    gap: 10px;
+}
+
+#display {
+    flex: 1;
+    padding: 12px;
+    font-size: 22px;
+    background: #000;
+    color: #ff8c00;
+    border: 2px solid #ff8c00;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+/* Grid das teclas */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Botões padrões */
+button {
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #333;
+    border: 1px solid #444;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #444;
+}
+
+button:focus {
+    outline: none;  
+}
+/* Botões de operação */
+.btn-op {
+    background: #ff8c00;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-op:hover {
+    background: #ffa733;
+}
+
+/* Botões especiais */
+#delete,
+#clear {
+    background: #ff8c00;
+    color: black;
+    font-weight: bold;
+}
+
+#delete:hover,
+#clear:hover {
+    background: #ffa733;
+}
